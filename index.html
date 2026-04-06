@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rawan Group | معدات طب وجراحة العيون</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Tajawal for Arabic) -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration & Custom CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A365D',   // Elegant Navy Blueprint
+                        secondary: '#2B6CB0', // Soft Blue
+                        accent: '#E2E8F0',    // Clean subtle accent
+                        light: '#FFFFFF',     // Pure White
+                        graytext: '#4A5568'   // Softer gray for text
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Clean Minimal Styles */
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #FAFAFA;
+            color: #2D3748;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(240, 244, 248, 0.9), rgba(240, 244, 248, 0.7)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .glass-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid #EDF2F7;
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        /* Minimal Animated Button */
+        .btn-primary {
+            background-color: #1A365D;
+            color: white;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #2B6CB0;
+            box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
+        }
+
+        /* Floating WhatsApp Button Animation */
+        @keyframes subtle-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        .whatsapp-float {
+            animation: subtle-pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-accent selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-lg shadow-sm border-b border-gray-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center h-full max-h-20">
+                    <a href="#home" class="flex items-center gap-2 h-full py-1">
+                        <img src="logo.jpeg" alt="Rawan Group Logo" class="h-16 md:h-20 w-auto object-contain">
+                        <span class="font-bold text-xl md:text-2xl text-primary tracking-wide hidden sm:block">Rawan Group</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="text-gray-600 hover:text-secondary font-medium transition duration-300 text-sm md:text-base">الرئيسية</a>
+                    <a href="#about" class="text-gray-600 hover:text-secondary font-medium transition duration-300 text-sm md:text-base">من نحن</a>
+                    <a href="#vision" class="text-gray-600 hover:text-secondary font-medium transition duration-300 text-sm md:text-base">الرؤية والأهداف</a>
+                    <a href="#products" class="text-gray-600 hover:text-secondary font-medium transition duration-300 text-sm md:text-base">المنتجات</a>
+                    <a href="#agencies" class="text-gray-600 hover:text-secondary font-medium transition duration-300 text-sm md:text-base">وكلاء معتمدون</a>
+                </nav>
+
+                <!-- Mobile Menu Button & Contact Button -->
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="hidden md:inline-block btn-primary px-6 py-2.5 rounded-lg text-sm font-medium transition shadow-sm">اتصل بنا</a>
+                    <div class="md:hidden flex items-center">
+                        <a href="#contact" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium transition">تواصل</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative hero-bg h-screen flex items-center justify-center text-center">
+        <div class="container mx-auto px-4 z-10 pt-16">
+            <span class="text-secondary font-semibold tracking-wider uppercase mb-4 block text-sm md:text-base">الابتكار في الرعاية الصحية</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-primary mb-6 leading-tight max-w-4xl mx-auto">
+                أحدث أجهزة ومعدات <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-blue-400">طب وجراحة العيون</span>
+            </h1>
+            <p class="text-lg md:text-xl text-graytext mb-10 max-w-2xl mx-auto leading-relaxed">
+                حلول طبية متكاملة للعيادات والمراكز في ليبيا، بخبرة وثقة تمتد منذ عام 2004 بدقة وجودة لا تضاهى.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/218924173771" target="_blank" class="bg-white text-graytext border border-gray-200 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-50 hover:text-[#25d366] transition shadow-sm flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    تواصل عبر واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Image side -->
+                <div class="lg:w-1/2 relative group">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl mb-8 lg:mb-0">
+                        <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=1000&auto=format&fit=crop" alt="معدات طب العيون" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 border-[0.5rem] border-white/20 rounded-3xl z-10 pointer-events-none"></div>
+                    </div>
+                    <!-- Experience Badge -->
+                    <div class="absolute -bottom-8 -right-4 md:-right-8 bg-white p-6 rounded-2xl shadow-2xl text-center border border-gray-50 z-20">
+                        <span class="block text-4xl font-extrabold text-secondary">+20</span>
+                        <span class="text-sm font-semibold text-gray-500 mt-1 block">سنة من الخبرة</span>
+                    </div>
+                </div>
+                
+                <!-- Text side -->
+                <div class="lg:w-1/2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-10 h-0.5 bg-secondary rounded-full"></span>
+                        <h3 class="text-secondary font-bold text-sm tracking-widest">عن شركتنا</h3>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6 leading-snug">الرواد في توريد <br><span class="text-gray-700 font-light">أجهزة طب العيون</span></h2>
+                    <p class="text-graytext text-lg leading-relaxed mb-6">
+                        شركة <strong class="text-primary font-bold">Rawan Group</strong> متخصصة في توفير أحدث أجهزة ومعدات طب وجراحة العيون. نحن لا نبيع المعدات فحسب، بل نوفر حلولاً متكاملة وشاملة للعيادات والمراكز الطبية داخل ليبيا.
+                    </p>
+                    <p class="text-graytext text-lg leading-relaxed mb-10">
+                        منذ انطلاقتنا في عام 2004، أخذنا على عاتقنا التزاماً بتقديم أعلى معايير الجودة والتقنيات الحديثة لضمان أفضل رعاية صحية للمرضى، ودعم الكوادر الطبية بأدوات موثوقة وعالية الدقة.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 text-secondary">
+                                <i class="fa-solid fa-microscope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary mb-1 text-lg">أحدث التقنيات</h4>
+                                <p class="text-sm text-gray-500">نواكب التطور العالمي الدائم.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 text-secondary">
+                                <i class="fa-solid fa-hand-holding-medical text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary mb-1 text-lg">حلول متكاملة</h4>
+                                <p class="text-sm text-gray-500">تجهيز العيادات من الألف إلى الياء.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision and Goals Section -->
+    <section id="vision" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-secondary font-semibold tracking-wider text-sm mb-2 block">مبادئنا الأساسية</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">رؤيتنا وأهدافنا</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-secondary to-blue-300 mx-auto rounded-full mb-6"></div>
+                <p class="text-graytext text-lg">نعمل بشغف لرفع مستوى الرعاية الصحية لطب العيون في ليبيا من خلال توفير معدات طبية استثنائية.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Vision Card -->
+                <div class="glass-card p-10 text-center hover:bg-white group cursor-default">
+                    <div class="w-16 h-16 mx-auto bg-blue-50 text-secondary rounded-full flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition duration-500 shadow-sm">
+                        <i class="fa-solid fa-eye text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-primary mb-4">رؤيتنا</h3>
+                    <p class="text-graytext leading-relaxed text-sm">
+                        أن نكون الخيار الأول والشركة الرائدة في السوق الليبي لتجهيز المراكز الطبية، وبناء شراكات مستدامة مع أطباء العيون.
+                    </p>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="glass-card p-10 text-center hover:bg-white group cursor-default">
+                    <div class="w-16 h-16 mx-auto bg-blue-50 text-secondary rounded-full flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition duration-500 shadow-sm">
+                        <i class="fa-solid fa-bullseye text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-primary mb-4">رسالتنا</h3>
+                    <p class="text-graytext leading-relaxed text-sm">
+                        الارتقاء بجودة الخدمات الطبية في ليبيا عبر استيراد وتوفير أجهزة تشخيصية وعلاجية دقيقة ومطابقة للمعايير العالمية.
+                    </p>
+                </div>
+
+                <!-- Goals Card -->
+                <div class="glass-card p-10 text-center hover:bg-white group cursor-default">
+                    <div class="w-16 h-16 mx-auto bg-blue-50 text-secondary rounded-full flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition duration-500 shadow-sm">
+                        <i class="fa-solid fa-award text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-primary mb-4">أهدافنا</h3>
+                    <div class="text-graytext text-sm space-y-3 mr-4 text-right">
+                        <p class="flex items-start gap-2"><i class="fa-solid fa-check text-secondary mt-1 text-xs"></i> خدمة ما بعد البيع ودعم فني متميز.</p>
+                        <p class="flex items-start gap-2"><i class="fa-solid fa-check text-secondary mt-1 text-xs"></i> توفير تدريب للكوادر على الأجهزة.</p>
+                        <p class="flex items-start gap-2"><i class="fa-solid fa-check text-secondary mt-1 text-xs"></i> تلبية احتياجات السوق بسرعة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-secondary font-semibold tracking-wider text-sm mb-2 block">معرض الأجهزة</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">منتجاتنا</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-secondary to-blue-300 mx-auto rounded-full mb-6"></div>
+                <p class="text-graytext text-lg">نقدم تشكيلة واسعة من أحدث أجهزة ومعدات طب وجراحة العيون، وفق أعلى معايير الجودة العالمية.</p>
+            </div>
+
+            <!-- Products Slider Container -->
+            <div class="relative max-w-4xl mx-auto px-4 md:px-12">
+                
+                <!-- Navigation Buttons -->
+                <button id="nextProduct" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-accent hover:text-white transition duration-300 focus:outline-none">
+                    <i class="fa-solid fa-chevron-right text-lg md:text-xl"></i>
+                </button>
+                <button id="prevProduct" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-accent hover:text-white transition duration-300 focus:outline-none">
+                    <i class="fa-solid fa-chevron-left text-lg md:text-xl"></i>
+                </button>
+
+                <!-- Slider -->
+                <div id="productsSlider" class="flex overflow-hidden scroll-smooth rounded-2xl shadow-sm border border-gray-100 bg-white">
+                    <!-- Product 1 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="1.jpeg" alt="Product 1" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="2.jpeg" alt="Product 2" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="3.jpeg" alt="Product 3" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="4.jpeg" alt="Product 4" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="5.jpeg" alt="Product 5" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="6.jpeg" alt="Product 6" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="7.jpeg" alt="Product 7" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="8.jpeg" alt="Product 8" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 9 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="9.jpeg" alt="Product 9" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 10 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="10.jpeg" alt="Product 10" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 11 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="11.jpeg" alt="Product 11" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 12 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="12.jpeg" alt="Product 12" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 13 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="13.jpeg" alt="Product 13" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Product 14 -->
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="14.jpeg" alt="Product 14" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="15.jpeg" alt="Product 15" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="16.jpeg" alt="Product 16" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                     <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="17.jpeg" alt="Product 17" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                     <div class="flex-shrink-0 w-full flex items-center justify-center p-8 group">
+                        <img src="18.jpeg" alt="Product 18" class="max-h-96 object-contain group-hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const slider = document.getElementById('productsSlider');
+                    const nextBtn = document.getElementById('nextProduct');
+                    const prevBtn = document.getElementById('prevProduct');
+                    
+                    nextBtn.addEventListener('click', () => {
+                        // For RTL, scrolling "right" actually scrolls negatively/decreases in value depending on browser
+                        slider.scrollBy({ top: 0, left: slider.clientWidth, behavior: 'smooth' });
+                    });
+                    
+                    prevBtn.addEventListener('click', () => {
+                        slider.scrollBy({ top: 0, left: -slider.clientWidth, behavior: 'smooth' });
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Agencies / Partners Section -->
+    <section id="agencies" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-secondary font-semibold tracking-wider text-sm mb-2 block">شركاء النجاح</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">وكلاء معتمدون</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-secondary to-blue-300 mx-auto rounded-full mb-6"></div>
+                <p class="text-graytext text-lg">نحن نفتخر بكوننا وكلاء معتمدين لأفضل الشركات العالمية المتخصصة في صناعة الأجهزة والمعدات الطبية.</p>
+            </div>
+
+            <!-- Partners Grid -->
+            <div class="flex justify-center items-center gap-8 flex-wrap">
+                <!-- Appasamy Associates Partner Card -->
+                <div class="bg-white rounded-3xl p-8 text-center group hover:-translate-y-2 transition duration-500 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)]">
+                    <div class="h-32 w-full flex items-center justify-center mb-6 overflow-hidden">
+                        <img src="APPASAMY.jpeg" alt="Appasamy Associates Logo" class="max-h-full max-w-full object-contain filter group-hover:scale-110 transition duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100">
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2">Appasamy Associates</h3>
+                    <p class="text-gray-400 text-xs">حلول متكاملة لطب العيون</p>
+                </div>
+
+                <!-- G-Medics Partner Card -->
+                <div class="bg-white rounded-3xl p-8 text-center group hover:-translate-y-2 transition duration-500 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)]">
+                    <div class="h-32 w-full flex items-center justify-center mb-6 overflow-hidden">
+                        <img src="g.jpg" alt="G-Medics Logo" class="max-h-full max-w-full object-contain filter group-hover:scale-110 transition duration-500 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100">
+                    </div>
+                    <h3 class="text-lg font-bold text-primary mb-2">G-Medics</h3>
+                    <p class="text-gray-400 text-xs">شريك ووكيل رسمي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white relative overflow-hidden">
+        <!-- Subtle Background Decoration -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-gray-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-secondary font-semibold tracking-wider text-sm mb-2 block">نحن هنا لخدمتك</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-primary mb-6">تواصل معنا</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-secondary to-blue-300 mx-auto rounded-full mb-6"></div>
+                <p class="text-graytext text-lg">يسعدنا الإجابة على استفساراتكم وتلبية طلباتكم. تواصلوا معنا عبر القنوات التالية.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 max-w-5xl mx-auto">
+                
+                <!-- Contact Info Boxes -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                    
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 flex flex-col items-center justify-center">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary mb-6">
+                            <i class="fa-solid fa-location-dot text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-primary text-lg mb-2">موقعنا</h4>
+                        <p class="text-graytext text-sm">طرابلس - ليبيا</p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 flex flex-col items-center justify-center">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary mb-6">
+                            <i class="fa-solid fa-phone text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-primary text-lg mb-2">رقم الهاتف</h4>
+                        <a href="tel:+218913200543" class="text-graytext hover:text-secondary text-sm font-medium transition" dir="ltr">+218 91 3200543</a>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 flex flex-col items-center justify-center">
+                        <div class="w-14 h-14 bg-[#25d366]/10 rounded-full flex items-center justify-center shadow-sm text-[#25d366] mb-6">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-primary text-lg mb-2">واتساب</h4>
+                        <a href="https://wa.me/218924173771" target="_blank" class="text-graytext hover:text-[#25d366] text-sm font-medium transition" dir="ltr">+218 92 4173771</a>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-2xl p-8 text-center hover:bg-white hover:shadow-lg transition duration-300 border border-gray-100 flex flex-col items-center justify-center">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary mb-6">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-primary text-lg mb-2">البريد الإلكتروني</h4>
+                        <a href="mailto:Rawanmedical@yahoo.com" class="text-graytext hover:text-secondary text-sm font-medium transition mb-1 block truncate w-full">Rawanmedical@yahoo.com</a>
+                        <a href="mailto:info.rawan.33@gmail.com" class="text-graytext hover:text-secondary text-sm font-medium transition block truncate w-full">info.rawan.33@gmail.com</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-20 pb-8 border-t-[6px] border-secondary">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
+                <!-- Brand Info -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#home" class="flex items-center gap-2 mb-8">
+                        <img src="logo.jpeg" alt="Rawan Group Logo" class="h-12 w-auto bg-white/10 p-1 rounded backdrop-blur-sm">
+                        <span class="font-bold text-2xl tracking-wide">Rawan Group</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-loose">
+                        شركاؤكم الموثوقون في توفير أحدث التقنيات والمعدات الطبية لجراحة وطب العيون في ليبيا منذ 2004. نلتزم بالجودة والدقة.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-8 text-white">روابط سريعة</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition flex items-center gap-2"><div class="w-1 h-1 bg-secondary rounded-full"></div>الرئيسية</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition flex items-center gap-2"><div class="w-1 h-1 bg-secondary rounded-full"></div>من نحن</a></li>
+                        <li><a href="#vision" class="text-gray-400 hover:text-white transition flex items-center gap-2"><div class="w-1 h-1 bg-secondary rounded-full"></div>الرؤية والأهداف</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition flex items-center gap-2"><div class="w-1 h-1 bg-secondary rounded-full"></div>المنتجات</a></li>
+                    </ul>
+                </div>
+
+                <!-- Working Hours -->
+                <div>
+                    <h4 class="text-lg font-bold mb-8 text-white">أوقات العمل</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex justify-between bg-white/5 p-3 rounded-lg">
+                            <span>السبت - الخميس:</span>
+                            <span dir="ltr" class="text-gray-300">09:00 AM - 05:00 PM</span>
+                        </li>
+                        <li class="flex justify-between bg-white/5 p-3 rounded-lg border border-red-500/20">
+                            <span>الجمعة:</span>
+                            <span class="text-red-400 font-medium">مغلق</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center">
+                <p>جميع الحقوق محفوظة &copy; 2026 لشركة Rawan Group</p>
+                <p class="mt-4 md:mt-0 bg-white/5 px-4 py-1.5 rounded-full">طرابلس، ليبيا</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/218924173771" target="_blank" class="whatsapp-float fixed bottom-6 left-6 w-16 h-16 bg-[#25d366] text-white rounded-full flex items-center justify-center text-4xl shadow-2xl hover:bg-[#1ebe57] transition-all z-50 hover:-translate-y-2" title="تواصل معنا عبر واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
